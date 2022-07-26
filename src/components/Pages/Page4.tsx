@@ -4,10 +4,11 @@ import {AiFillCheckCircle} from 'react-icons/ai'
 interface propsInterface {
   primaryColor: string;
   setPage: any;
+  page1Data: any;
 };
 
 const Page4 = (props: propsInterface) => {
-  const { primaryColor } = props;
+  const { primaryColor,page1Data } = props;
 
   return (
     <Flex
@@ -22,7 +23,7 @@ const Page4 = (props: propsInterface) => {
         <AiFillCheckCircle size={80}  />
       </Box>
       <Text mt="5" fontSize={'2xl'} fontWeight="bold" textAlign="center">
-        Congratulations, Eren!
+        Congratulations, {page1Data.displayName}!
       </Text>
       <Text fontSize={'md'} mb="5" fontWeight="medium" textAlign="center">
         You have completed onboarding, you can start using Eden!

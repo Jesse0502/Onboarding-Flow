@@ -24,7 +24,7 @@ export const App = () => {
     (<Page1 primaryColor={primaryColor} setPage={setPage} page1Data={page1Data} setPage1Data={setPage1Data}/>),
     (<Page2 primaryColor={primaryColor} setPage={setPage} page2Data={page2Data} setPage2Data={setPage2Data}/>),
     (<Page3 page3Data={page3Data} setPage3Data={setPage3Data} primaryColor={primaryColor}  setPage={setPage}/>),
-    (<Page4 primaryColor={primaryColor} setPage={setPage} />),
+    (<Page4 page1Data={page1Data} primaryColor={primaryColor} setPage={setPage} />),
   ];
 
   return (
