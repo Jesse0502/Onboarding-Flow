@@ -1177,11 +1177,6 @@
     "@chakra-ui/hooks" "2.0.4"
     "@chakra-ui/utils" "2.0.4"
 
-"@chakra-ui/cra-template-typescript@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/cra-template-typescript/-/cra-template-typescript-2.0.2.tgz#bf579a91fdb57c2355771ac77d7a17c9383baaae"
-  integrity sha512-JodBxr02YXWQZx2zr9ygiv9OLytUzOyk6anu1Am6GSaN/JXHeOdEJEv5xF199LMz25aVnAZpKiE8q/kn9hg2Ug==
-
 "@chakra-ui/css-reset@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@chakra-ui/css-reset/-/css-reset-2.0.1.tgz#53bbc2c48dd9fdfb59af8cb8e20390ad7ddb3688"
