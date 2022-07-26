@@ -35,13 +35,13 @@ const Progress = (props: propsInterface) => {
   }
   return (
     <Flex alignItems="center" mt="10" mb="5">
-      <Flex alignItems="center" w="24" onClick={() => handleChangePage(0)}>
+      <Flex alignItems="center" w={["16","24"]} onClick={() => handleChangePage(0)}>
         <Text {...tagProps} bg={primaryColor} color="white">
           1
         </Text>
         <Divider active={true} primaryColor={primaryColor} />
       </Flex>
-      <Flex alignItems="center" w="120px" onClick={() => handleChangePage(1)}>
+      <Flex alignItems="center" w={["80px","140px"]} onClick={() => handleChangePage(1)}>
         <Divider active={page >= 1} primaryColor={primaryColor} />
         <Text
           {...tagProps}
@@ -52,7 +52,7 @@ const Progress = (props: propsInterface) => {
         </Text>
         <Divider active={page >= 1} primaryColor={primaryColor} />
       </Flex>
-      <Flex alignItems="center" w="120px" onClick={() => handleChangePage(2)}>
+      <Flex alignItems="center" w={["80px","140px"]} onClick={() => handleChangePage(2)}>
         <Divider active={page >= 2} primaryColor={primaryColor} />
 
         <Text
@@ -64,7 +64,7 @@ const Progress = (props: propsInterface) => {
         </Text>
         <Divider active={page >= 2} primaryColor={primaryColor} />
       </Flex>
-      <Flex alignItems="center" w="24" onClick={() => handleChangePage(3)}>
+      <Flex alignItems="center" w={["16","24"]} onClick={() => handleChangePage(3)}>
         <Divider active={page >= 3} primaryColor={primaryColor} />
 
         <Text

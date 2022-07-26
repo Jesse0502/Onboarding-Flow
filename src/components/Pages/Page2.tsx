@@ -29,7 +29,8 @@ const Page2 = (props: PropsInterface) => {
       flexDir="column"
       alignItems="center"
       p="5"
-      w="45vw"
+      mt={["10","0"]}
+      w={["90vw","45vw"]}
     >
       <Text fontSize="3xl" textAlign="center" fontWeight="extrabold">
         Let's setup a home for all your work

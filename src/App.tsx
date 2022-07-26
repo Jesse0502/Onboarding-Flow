@@ -31,7 +31,7 @@ export const App = () => {
     <ChakraProvider>
       <Center
         maxH="100vh"
-        py="12"
+        py={["20","12"]}
         flexDir="column"
         sx={{ "font-family": "Inter, sans-serif" }}
       >

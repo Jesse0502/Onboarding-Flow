@@ -11,12 +11,12 @@ const Page4 = (props: propsInterface) => {
 
   return (
     <Flex
-    mt="10"
       sx={{ "font-family": "Inter, sans-serif" }}
       flexDir="column"
       alignItems="center"
       p="5"
-      w="45vw"
+      mt={["10", "0"]}
+      w={["90vw","45vw"]}
     >
       <Box bg={"white"} color={primaryColor} rounded="full">
         <AiFillCheckCircle size={80}  />
