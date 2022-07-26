@@ -1,38 +1,49 @@
-import * as React from "react"
+import * as React from "react";
 import {
+  Center,
   ChakraProvider,
-  Box,
+  Flex,
   Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+} from "@chakra-ui/react";
+// @ts-ignore
+import logo from "./assets/logo.PNG";
+import Progress from "./components/Progress";
+import Page1 from "./components/Pages/Page1";
+import Page2 from "./components/Pages/Page2";
+import Page3 from "./components/Pages/Page3";
+import Page4 from "./components/Pages/Page4";
 
-export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
+export const App = () => {
+  let primaryColor = "#664DE5";
+  const [page, setPage] = React.useState(0);
+  const [page1Data, setPage1Data] = React.useState(null)
+  const [page2Data, setPage2Data] = React.useState(null)
+  const [page3Data, setPage3Data] = React.useState(null)
+
+  const Pages = [
+    (<Page1 primaryColor={primaryColor} setPage={setPage} page1Data={page1Data} setPage1Data={setPage1Data}/>),
+    (<Page2 primaryColor={primaryColor} setPage={setPage} page2Data={page2Data} setPage2Data={setPage2Data}/>),
+    (<Page3 page3Data={page3Data} setPage3Data={setPage3Data} primaryColor={primaryColor}  setPage={setPage}/>),
+    (<Page4 primaryColor={primaryColor} setPage={setPage} />),
+  ];
+
+  return (
+    <ChakraProvider>
+      <Center
+        maxH="100vh"
+        py="12"
+        flexDir="column"
+        sx={{ "font-family": "Inter, sans-serif" }}
+      >
+        <Flex alignItems="center">
+          <img src={logo} alt="logo" height="40" width="40" />
+          <Text fontWeight="bold" fontSize="2xl">
+            Eden
           </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
-  </ChakraProvider>
-)
+        </Flex>
+        <Progress pagesData={[page1Data, page2Data, page3Data]} primaryColor={primaryColor} setPage={setPage} page={page} />
+        {Pages[page]}
+      </Center>
+    </ChakraProvider>
+  );
+};
